@@ -1,49 +1,78 @@
 
 require 'colorize'
 require 'tty-prompt'
+require './coffee_class'
+
 
 ## Welcome message
-puts '----------------------------------'
-puts 'Welcome to the Starbucks Simulator'
-puts '----------------------------------'
+puts '--------------------------------'
+puts 'Welcome to the Starbucks Program'.colorize(:green)
+puts '--------------------------------'
 
-## Coffee class (name,steps)
-class Coffee 
-     def initialize(name, steps)
-          @name = name
-          @steps = steps
-     end
 
-     def to_s 
-          "The steps for creating a #{@name} is #{@steps}"
-     end
+## Enter name
+puts "Welcome! Please enter your name to get started:"
+barista_name = gets.strip
+
+puts "Welcome barista #{barista_name}. Would you like to start (Y/N)?"
+start_program = gets.chomp 
+
+
+if start_program = "Y"
+    puts "Would you like to view Coffee or Frappucino beverages?"
+end 
+
+beverage_select = gets.chomp
+
+## Select coffee or frap
+if beverage_select == 'Coffee'
+  puts "Please select a coffee from the following options: "
+  puts "Flat-White (1)"
+  puts "Cappucino (2)"
+  puts "Mocha (3)"
+  puts "Chai (4)"
+  puts "Latte (5)"
+
+elsif beverage_select == 'Frappucino'
+  puts "Please select a frappucino from the following options: "
+  puts "Strawberries and Cream(1)"
+  puts "White Mocha (2)"
+  puts "Javachip (3)"
+  puts "Smores (4)"
+  puts "Espresso (5)"
 end
 
-## Coffee select menu
-puts "Please select from the following options: "
-puts "1) Flat white"
-puts "2) Cappucino"
-puts "3) Mocha"
-puts "4) Chai latte"
-puts "5) Latte"
-selection = gets.chomp.to_i
+coffee_menu_select = gets.chomp.to_i
 
-## User selection
-if selection == 1
-     puts Coffee.new("Flat white", "Step 1: Make Coffee")
+## Coffee select loop
+loop do 
+    if coffee_menu_select == 1
+        puts CoffeeSelect.new 'Flat-White', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
 
-elsif selection == 2
-     puts Coffee.new("Cappucino", "Step 1: Make Coffee")
+    elsif coffee_menu_select == 2
+        puts CoffeeSelect.new 'Cappucino', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
 
-elsif selection == 3
-     puts Coffee.new("Mocha", "Step 1: Make Coffee")
+    elsif coffee_menu_select == 3
+        puts CoffeeSelect.new 'Mocha', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
 
-elsif selection == 4
-     puts Coffee.new("Chai latte", "Step 1: Make Coffee")
+    elsif coffee_menu_select == 4
+        puts CoffeeSelect.new 'Chai', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
 
-elsif selection == 5
-     puts Coffee.new("Latte", "Step 1: Make Coffee")
-end 
+    elsif coffee_menu_select == 5
+        puts CoffeeSelect.new 'Latte', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
+    end
+    break
+end
+
+
+
+
+
+
+   
+
+ 
+
 
 
 
