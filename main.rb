@@ -1,18 +1,31 @@
-
 require 'colorize'
 require 'tty-prompt'
 require './coffee_class'
 
 
-## Welcome message
-puts '--------------------------------'
-puts 'Welcome to the Starbucks Program'.colorize(:green)
-puts '--------------------------------'
+## WELCOME MESSAGE
+File.open("welcome.txt", "r") do |file|
+    puts file.read()
+end
 
+## START MENU
+puts "What would you like to do?"
+puts "Start (1)"
+puts "Help (2)"
+puts "Exit (3)"
 
-## Enter name
-puts "Welcome! Please enter your name to get started:"
-barista_name = gets.strip
+start_select = gets.chomp.to_i 
+
+## START/HELP/EXIT menu selections
+if start_select == 1
+  puts "Welcome to the starbucks program! Please enter your name to get started:"
+  barista_name = gets.strip
+
+elsif
+    File.open("help.txt", "r") do |file|
+        puts file.read()
+    end 
+end
 
 puts "Welcome barista #{barista_name}. Would you like to start (Y/N)?"
 start_program = gets.chomp 
@@ -24,7 +37,7 @@ end
 
 beverage_select = gets.chomp
 
-## Select coffee or frap
+## SELECT BEVERAGE
 if beverage_select == 'Coffee'
   puts "Please select a coffee from the following options: "
   puts "Flat-White (1)"
@@ -47,7 +60,7 @@ end
 
 frappucino_menu_select = gets.chomp.to_i
 
-## Coffee select loop
+## COFFEE SELECT LOOP
 loop do 
     if coffee_menu_select == 1
         puts CoffeeSelect.new 'Flat-White', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
@@ -68,7 +81,7 @@ loop do
 end
 
 
-##Frap select loop
+## FRAPPUCINO SELECT LOOP
 loop do 
     if frappucino_menu_select == 1
         puts FrappucinoSelect.new 'Strawberries and Cream', 5.94, '1) Airate Milk for 2 seconds. 2) Pour and serve'
@@ -88,7 +101,7 @@ loop do
     break
 end
 
-## Coffee Shots
+## VIEW COFFEE SHOTS LOOP
 puts "Would you like to view how many coffee shots for each size? (Y/N)"
 view_shots = gets.chomp
 
@@ -98,10 +111,10 @@ end
 
 shot_selection = gets.chomp
 
-## Shots printed
+## PRINT COFFEE SHOTS
 if shot_selection == "Tall"
-    puts tall = {'FlatWhite' => 2, 'Cappucino' => 2, 'Mocha' => 2, 'Chai' => 0, 'Latte' => 2}
-    tall.each { |beverage, shots| 
+    tall = {'FlatWhite' => 2, 'Cappucino' => 2, 'Mocha' => 2, 'Chai' => 0, 'Latte' => 2}
+      tall.each { |beverage, shots| 
         puts "Beverage: #{beverage} Shots: #{shots}" 
     } 
 
