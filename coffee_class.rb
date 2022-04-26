@@ -1,13 +1,12 @@
-## Coffee class (name,steps,price)
+## Coffee class (name,steps)
 class CoffeeSelect 
-    def initialize(coffee, price, steps)
+    def initialize(coffee, steps)
          @coffee = coffee
-         @price = price
          @steps = steps
     end
 
     def to_s 
-         "The steps for creating a #{@coffee} is: #{@steps}. The price is $#{@price}."
+         "The steps for creating a #{@coffee} is: #{@steps}"
     end
 end
 
