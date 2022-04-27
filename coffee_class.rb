@@ -1,6 +1,6 @@
 ## Coffee class (name,steps)
 class CoffeeSelect 
-    def initialize(coffee, steps)
+    def initialize(coffee,steps)
          @coffee = coffee
          @steps = steps
     end
