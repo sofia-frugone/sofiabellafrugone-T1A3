@@ -27,5 +27,5 @@ This program requires these gems to run:
 Install the dependencies and run the following code in your terminal to start the program:
 
 ```
-
+./run_app.sh
 ```

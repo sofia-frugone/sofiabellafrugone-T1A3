@@ -1,2 +1,8 @@
 class,id,method,type,method_arg_1,method_arg_2,expected
-CoffeeSelect,_coffee_selection_,instance,coffee,steps,def_to.s
+coffee_select,_coffee_selection_,instance,coffee,steps,def_to.s
+
+id,type,params_1,params_2,expected
+print_shots,array,drink,shots,print_drink_shots
+
+id,type,params_1,params_2,expected
+print_cost,array,beverage,price,print_drink_cost
