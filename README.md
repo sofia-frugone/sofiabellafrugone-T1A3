@@ -1,6 +1,5 @@
 # Starbucks Coffee Program
 
-
 - This program is intened for new starbucks trainees
 - You will be able to select a beverage and see the related steps for creating the beverage 
 - Then you are asked if you want to see the coffee shots required for each drink size
@@ -19,12 +18,16 @@
 
 ## Installation
 
+You will need to have Ruby 3.1.2 installed.
+[Download](https://www.ruby-lang.org/en/downloads/)
+
 This program requires these gems to run:
 [TTY-box](https://github.com/piotrmurach/tty-box) 
 [TTY-font](https://github.com/piotrmurach/tty-font) 
 [Colorize](https://github.com/fazibear/colorize) 
 
-Install the dependencies and run the following code in your terminal to start the program:
+
+Install the dependencies and run the following code to start the program:
 
 ```
 ./run_app.sh
