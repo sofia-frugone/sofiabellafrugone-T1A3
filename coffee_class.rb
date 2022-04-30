@@ -6,7 +6,7 @@ class CoffeeSelect
     end
 
     def to_s 
-         "The steps for creating a #{@coffee} is: #{@steps}"
+         "The steps for creating a #{@coffee}: #{@steps}"
     end
 end
 

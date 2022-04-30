@@ -1,7 +1,7 @@
-require 'colorize'
 require './coffee_class'
+require 'colorize'
 require 'tty-box'
-
+require 'tty-font'
 
 
 ## GREET
@@ -9,38 +9,26 @@ File.open("welcome.txt", "r") do |file|
     puts file.read()
 end
 
-## ASKS FOR NAME
-begin
-  print TTY::Box.frame "Welcome to the starbucks program! Please enter your name to get started:"
-  barista_name = gets.strip
+## ASKS FOR NAME//PROGRAM START
+def user_name
+  print TTY::Box.frame "Welcome to the starbucks program! Please enter your name to get started:" ##uses tty-box 
+  barista_name = gets.strip 
   puts "Welcome barista #{barista_name.light_green}."
-rescue StandardError => error ## validates name
-  puts "Name must not be empty"
-  puts error.backtrace
 end 
 
-
-
-
+user_name
 
 ## SELECT COFFEE
 def select_beverage
-    puts "Please select a coffee from the following options: ".light_blue
-    puts "Flat-White (1)"
-    puts "Cappucino (2)"
-    puts "Mocha (3)"
-    puts "Chai (4)"
-    puts "Latte (5)"
+    puts "Please select a coffee from the following options: ".light_yellow
+    print TTY::Box.frame "Flat-White (1)", "Cappucino (2)", "Mocha (3)", "Chai (4)", "Latte (5)"
 end 
 
 select_beverage
       
 coffee_menu_select = gets.chomp.to_i
   
-    
-
 ## COFFEE LOOP
-
 if coffee_menu_select == 1
      puts CoffeeSelect.new 'Flat-White', '1) Airate Milk for 2 seconds. 2) Add fresh coffee shots and pour milk. 3) Serve.'.light_blue
 
@@ -57,14 +45,11 @@ elsif coffee_menu_select == 5
      puts CoffeeSelect.new 'Latte', '1) Airate Milk for 3 seconds. 2) Add fresh coffee shots and milk. 3) Serve.'.light_blue   
 end
 
-
 ## VIEW SHOTS LOOP
 def view_shots 
-    puts "It's important to know how many coffee shots are required for each drink size!".light_blue
-    puts "Please select:" 
-    puts "Tall (1)" 
-    puts "Grande (2)" 
-    puts "Venti (3)"
+    puts "It's important to know how many coffee shots are required for each drink size!".light_yellow
+    puts "Please select:"
+    print TTY::Box.frame "Tall (1)","Grande (2)","Venti (3)"
 end 
 
 view_shots
@@ -99,11 +84,9 @@ end
 
 ## DRINK COST
 def drink_cost 
-  puts "Time to learn the prices of the drinks you've just learnt to make!".light_blue
+  puts "Time to learn the prices of the drinks you've just learnt to make!".light_yellow
   puts "Please select a size...again:"
-  puts "Tall (1)"
-  puts "Grande (2)"
-  puts "Venti (3)"
+  print TTY::Box.frame "Tall (1)","Grande (2)","Venti (3)"
 end 
 
 drink_cost 
@@ -131,10 +114,12 @@ elsif drink_size == 3
     } 
 end
 
-
-## PROGRAM FINISH
-
+## PROGRAM END
+puts "-----------------------------------------------------"
 puts "Thank you for using the starbucks coffee program.".light_green 
+puts "-----------------------------------------------------"
+font = TTY::Font.new(:standard)
+puts font.write("GOODBYE") ##uses tty-font 
     
 
 
