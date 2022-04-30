@@ -8,7 +8,7 @@
 
 -> This program is intened for new starbucks trainees
 -> You will be able to select a beverage and see the related steps for creating the beverage 
--> You will then be asked if you would like to see the required coffee shots for each drink size (tall, grande, or venti)
--> You will also be asked if you would like to see the cost of each beverage for each size (tall, grande, or venti)
+-> Then you are asked if you want to see the coffee shots required for each drink size
+-> After, you can view the cost of each drink! (tall, grande, or venti)
 -> Input is required in the form of a number or a yes/no (Y/N). Example: Please select a drink size (Tall (1), Grande (2), or Venti (3))
 -> Enjoy!

@@ -1,24 +1,31 @@
-Develop a list of features that will be included in the application:
-Feature 1: View how to make a coffee
-The user can select a coffee from 5 different options. Once it's been selected the program will output what the steps for making the coffee are. 
-A coffee class was created and initialised the coffee and steps. I used to_s to print the users selection. I also used to_i when taking the users input.
-I used a loop to print the statements for all the coffees. 
+# Starbucks Coffee Program
 
-Feature 2 and 3: View coffee shots and View coffee price
-Feature 2 and 3 were implemeted in a very similar way. I created an array for each size and used .each method to iterate over the array.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+- This program is intened for new starbucks trainees
+- You will be able to select a beverage and see the related steps for creating the beverage 
+- Then you are asked if you want to see the coffee shots required for each drink size
+- After, you can view the cost of each drink! (tall, grande, or venti)
+- ⭐Enjoy⭐
 
-Software development plan
-Link to trello board: 
+ ## Features
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+- View how to make a coffee: user can  select a coffee from 5 different options. Once it's been selected the program will output what the steps for making the coffee are. 
+- View coffee shots: see the total number of shots required for each size.
+- View coffee price: view prices for each drink for each size.
 
-Help Documentation:
-Steps to install the application: 
+## Development plan
 
-Dependencies: 
+- [Trello](https://trello.com/b/oi5rvE2i/terminal-app-development-plan) - Link to software development plan on trello
 
-System/Hardware requirements:
+## Installation
 
-Sources: 
+This program requires these gems to run:
+[TTY-box](https://github.com/piotrmurach/tty-box) 
+[TTY-font](https://github.com/piotrmurach/tty-font) 
+[Colorize](https://github.com/fazibear/colorize) 
+
+Install the dependencies and run the following code in your terminal to start the program:
+
+```
+
+```
