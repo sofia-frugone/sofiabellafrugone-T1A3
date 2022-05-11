@@ -24,6 +24,10 @@ To view help information while in the program please run the following code:
 ```
 ruby main.rb help
 ```
+## Testing
+Manual testing was used for this application. Link to the CSV: https://docs.google.com/spreadsheets/d/1prfDWygjDxmJo9uyTarnl7yKYjiAfR8NPtB8nelpyec/edit?usp=sharing
+<img width="1372" alt="Screen Shot 2022-05-11 at 2 55 55 pm" src="https://user-images.githubusercontent.com/88522139/167772145-1fd633b0-d623-4175-bae9-5e0168283887.png">
+
 
 ## Development plan
 
