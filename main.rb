@@ -14,11 +14,11 @@ help = ARGV
 puts "--------------------------------------------------------------------------------------"
 puts "                                    HELP"
 puts "--------------------------------------------------------------------------------------"
-puts "This program is intented for new strabucks trainees. "
+puts "Input is required in the form of a number. 1..5"
 puts "To view the steps for making a coffee please select a beverage and follow the prompts."
 puts "To view the required shots please select a coffee size."
 puts "To view the cost of the coffee please select a coffee size."
-puts "Input is required in the form of a number."
+
 
 ## ASKS FOR NAME//PROGRAM START
 def user_name
