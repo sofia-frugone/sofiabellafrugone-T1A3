@@ -28,6 +28,12 @@ ruby main.rb help
 ## Development plan
 
 - [Trello](https://trello.com/b/oi5rvE2i/terminal-app-development-plan) - Link to software development plan on trello
+<img width="1439" alt="Screen Shot 2022-05-11 at 2 06 28 pm" src="https://user-images.githubusercontent.com/88522139/167767280-3ed656bf-fd41-4509-9a8d-7f68dde1727a.png">
+<img width="773" alt="Screen Shot 2022-05-11 at 2 06 42 pm" src="https://user-images.githubusercontent.com/88522139/167767329-623d1b53-c067-496b-a065-8053fa6d8b8c.png">
+<img width="771" alt="Screen Shot 2022-05-11 at 2 06 56 pm" src="https://user-images.githubusercontent.com/88522139/167767336-8fddf5dd-e3ef-41dc-a100-a333755f601d.png">
+<img width="777" alt="Screen Shot 2022-05-11 at 2 07 12 pm" src="https://user-images.githubusercontent.com/88522139/167767340-99a133e6-f972-42c4-a13a-7503c445c6ef.png">
+
+
 
 ## Installation/dependencies 
 
